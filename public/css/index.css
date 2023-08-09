@@ -10,10 +10,10 @@
 /* <!-- Завдання №2. !!!!!  Змініть фон заголовка на зелений, коли користувач наведе курсор миші на посилання: -->
   <!--  Використовуйте цей селектор :hover--> */
 
-  .lesson-four-task-two >.title{
+  /* .lesson-four-task-two >.title{
   
     background-color: yellow;
-  }
+  } */
 
 
 .lesson-four-task-two .link:hover+.title{
@@ -33,9 +33,9 @@
     color: red;
     }  
 
-  .lesson-four-task-three .link:visited{
-color: yellow;
-}
+    .lesson-four-task-three a.link:visited{
+    color: yellow;
+    }
 
 
 
@@ -50,7 +50,7 @@ color: yellow;
 
 <!--      Використовуйте цей селектор :link --> */
 
-.lesson-four-task-four #sidebar>.link{
+.lesson-four-task-four #sidebar a:link{
   color: red;
 }
 
@@ -98,7 +98,7 @@ color: yellow;
 
 <!--      Використовуйте цей селектор :checked --> */
 
-.lesson-four-task-eight #checkbox:checked {
+.lesson-four-task-eight #checkbox:checked+#target {
   color: white;
   background-color: blue;
 }
