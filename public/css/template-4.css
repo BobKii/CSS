@@ -29,6 +29,8 @@
 
   display: flex;
   justify-content: center;
+
+  font-family: Roboto;
 }
 
 .page_content {
@@ -71,8 +73,7 @@ justify-content: space-between;
 }
 
 .nav_inline {
-  gap: var(--space-l);
-  /* flex-direction: column; */
+  gap: var(--space-l); 
 }
 
 .nav_vertical {
@@ -125,7 +126,7 @@ color: var(--color-primary);
   display: flex;
   align-items: center;
   gap: var(--space-b);
-
+  
   padding: 80px;
   border-bottom: 1px solid var(--color-border);
 }
@@ -160,7 +161,7 @@ color: var(--color-primary);
 .blog {
   display: flex;
   gap: var(--space-b);
-
+  justify-content: center;
   padding: var(--space-b);
   border-bottom: 1px solid var(--color-border);
 }
@@ -168,23 +169,31 @@ color: var(--color-primary);
 .card {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  align-items: left;
+  text-align: left;
   gap: var(--space-l);
+  width: calc(100% /3);
+  font-size: 16px;
+ 
 
 }
 
 .card_image {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-
+  display: flex;
+  width: 64px;
+  height: 64px;
+  padding: 16px;
+  align-items: flex-start;
+  justify-content:left;
+  gap: 10px;
 }
 
 .card_title {
-  font-size: 32px;
+  float: left;
+  font-size: 31px;
   font-weight: var(--weight-title);
   line-height: 100%; 
+  justify-content: left;
   color: var(--color-title);
 }
 
@@ -197,15 +206,45 @@ color: var(--color-primary);
 .button {
   display: inline-block;
   font-size: var(--size-d);
+  color:#0D6EFD;
   text-decoration: none;
-  padding: var(--space-m) var(--space-xm);
-  border-radius: var(--border-radius);
+  justify-content: last baseline;
+  
+  border-radius: 5px;
+  justify-content:last baseline;
+  text-decoration:underline;
+}
+
+.button_hero {  
+  font-size: 16px;
+  color:white;
+  background: #6C757D;;
+  max-width: 120px;
+  text-decoration: none;
+  
+  padding: 12px 16px; 
+  border-radius: 4px;
+  
+  padding: 12px 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  display: inline-block;
+  font-size: var(--size-d);
+  color:#0D6EFD;
+  text-decoration: none;
+  justify-content: last baseline;
+  
+  border-radius: 5px;
+ 
 }
 
 
 .card_button {
-  color: var(--color-white);
-  background-color: var(--color-primary);
+  justify-content:last baseline;
+  text-decoration:underline;
   
 }
 
@@ -218,8 +257,8 @@ color: var(--color-primary);
   justify-content: space-between;
   align-content: center;
   background-color: var(--color-primary);
-  padding: var(--space-l);
-  border-radius: var(--border-radius);
+  padding: 24px;
+  border-radius: 8px;
 }
 
 .form_content {
@@ -229,9 +268,10 @@ color: var(--color-primary);
 }
 
 .form_title {
-  font-size: 27px;
+  font-size: 24px;
   font-weight: var(--weight-title);
   color: var(--color-white);
+  padding-bottom: 12px;
 
 }
 
@@ -243,8 +283,12 @@ color: var(--color-primary);
 
 .form_button {
   background-color: var(--color-white);
-  width: 100%;
-  max-width: 160px;
-  color: var(--color-text);
+  color: #212529;
+  text-align: center;
+ 
+  height: 52px;
+  width: 240px;  
+  font-size: 20px;
+  padding: 16px; 
 
 }
