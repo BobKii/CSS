@@ -11,18 +11,17 @@
 </header>
 
 <main class="main">
-  {{#with messages}}
+  {{#with info}}
   <div class="messages">
     <h1 class="message_title"> {{title}} </h1>
-    {{#each list}}
-    <div class="msg">
-      <strong class="msg_name"> {{name}} </strong>
-      <p class="msg_text"> {{message}} </p>
-      <span class="msg_day"> {{day}} </span>
-    </div>
-    {{/each}}
 
-    <a href="#" class="messages_link">All messages</a>
+    <div class="msg">
+      <strong class="msg_name"> {{description}} </strong>
+      {{!-- <p class="msg_text"> {{message}} </p>
+      <span class="msg_day"> {{day}} </span> --}}
+    </div>
+
+    {{!-- <a href="#" class="messages_link">All messages</a> --}}
   </div>
   {{/with}}
 
@@ -48,6 +47,51 @@
   </form>
   {{/with}}
 </main>
+
+<divupdates class="my3">
+  {{#with updates}}
+  <div class="my3_header"> {{title}} </div>
+  <div class="updates_list">
+    {{#each list}}
+    <div class="list_item">
+      <div class="svg_item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <path d="M32 0H0V32H32V0Z" fill="#E83E8C" />
+        </svg>
+      </div>
+      {{!-- <img src="#" alt=" image" class="list_item_img"> --}}
+      <div class="updates_media">
+        <div class="list_nickname"> {{nickname}}</div>
+        <div class="list_description"> {{description}} </div>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/with}}
+  <a href="#" class="messages_link">All updates</a>
+</divupdates>
+{{!-- <div class="feetback_badge">
+
+</div> --}}
+
+<divfeetback class="feetback">
+  <button type="button" class="feetback_badge">{{badge}}</button>
+  {{#with expirience}}
+  <div class="feetback_header"> {{title}} </div>
+  {{!-- <div class="feetback_badge"> {{badge}} </div> --}}
+
+  <div class="expirience">
+    {{#each list}}
+    <div class="expirience_list">
+      <div class="expirience_name"> {{name}} </div>
+      <div class="expirience_details"> {{details}} </div>
+    </div>
+    {{/each}}
+  </div>
+
+  {{/with}}
+</divfeetback>
+
 
 <div class="advantages">
   {{#each advantages}}
