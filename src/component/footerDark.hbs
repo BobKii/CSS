@@ -1,6 +1,13 @@
-<div>
-  {{!-- {{#with data}} --}}
-  <h1 class="hero_title"> {{title}} </h1>
-  <p class="hero_text"> {{text}} </p>
-  {{!-- {{/with}} --}}
+<div class="footer">
+  {{#with footer}}
+  {{#each pages}}
+  <div class="footer_link ">
+    <a href="{{path}}" class="footer_title">{{name}}</a>
+  </div>
+  {{/each}}
+  <div class="footer_position">
+    <span class="footer_copyright">{{copyright}}</span>
+  </div>
+  {{/with}}
+
 </div>

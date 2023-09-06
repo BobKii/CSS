@@ -1,6 +1,30 @@
 <div>
-  {{!-- {{#with data}} --}}
-  <h1 class="hero_title"> {{title}} </h1>
-  <p class="hero_text"> {{text}} </p>
-  {{!-- {{/with}} --}}
+  <header class="header">
+    {{#with header}}
+    <div class="header_nav">
+      <div class="logo">
+        <div class="badge text-bg-primary">{{brandName}} </div>
+      </div>
+    </div>
+    <nav class="header_nav ">
+      <div class="header_nav_right">
+        <div class="nav {{#if isVertical}} nav_vertical {{else}} nav_inline {{/if}}">
+          {{#each links}}
+          <a href="{{url}}" class="nav_link">{{text}}</a>
+          {{/each}}
+        </div>
+        {{!-- {{> nav list=header }} --}}
+      </div>
+    </nav>
+  </header>
+  <div class="post_header">
+    <div class="aDpoint"> Ad</div>
+    {{#with ad}}
+    <a href=" {{url}} " class="ad_text"> {{text}} {{url}} </a>
+    {{/with}}
+    <div class="userOnline">
+      <div> Users online: {{userOnline}} </div>
+    </div>
+    {{/with}}
+  </div>
 </div>

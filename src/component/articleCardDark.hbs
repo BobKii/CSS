@@ -1,6 +1,14 @@
 <div>
-  {{!-- {{#with data}} --}}
-  <h1 class="hero_title"> {{title}} </h1>
-  <p class="hero_text"> {{text}} </p>
-  {{!-- {{/with}} --}}
+  <divCardBoxArea class="divCardBoxArea">
+    {{#each articles}}
+    <divCard class="divCard">
+      <img src=" {{photo}} " alt="photo image" class="photo_image">
+      <div class="hero_content">
+        <h2 class="hero_title"> {{name}} </h2>
+        <p class="hero_text"> {{description}} </p>
+        <a href="#" class="button_hero"> Read All </a>
+      </div>
+    </divCard>
+    {{/each}}
+  </divCardBoxArea>
 </div>
