@@ -12,6 +12,7 @@
 
   --color-border: #dee2e6; 
   --color-primary: rgb(46, 46, 255);
+  --bg_color-logo: #563D7C;
   --color-white: #FFF ;
   --color-title: #212529;
   --color-text: #343A40;
@@ -60,7 +61,7 @@ justify-content: space-between;
   font-size: 17px;
   color: var(--color-white) ;
   
-  background-color: var(--color-primary);
+  background-color: var(--bg_color-logo);
 
   width: 24px;
   height: 24px;
@@ -379,7 +380,7 @@ color: var(--color-primary);
 
 .my3_header {
   display: flex;
-  padding-bottom: 0px;
+  padding-bottom: 12px;
   align-items: flex-start;
   gap: 10px;
   align-self: stretch;
@@ -387,27 +388,18 @@ color: var(--color-primary);
   
 }
 
-.updates_list {
-  /* display: flex;
-  padding-bottom: 0px;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 12px;
-  flex: 1 0 0; */
-
-  /* display: flex;
-align-items: flex-start;
-gap: 8px;
-align-self: stretch; */
-/* display: flexbox; */
+.updates_list { 
 flex-direction: row;
 gap: 24px;
+
 }
 
 .list_item {
   display: flex;
-flex-direction: row;
-gap: 24px;
+  flex-direction: row;  
+  margin-bottom: 24px;
+  border-bottom: 1px solid #DEE2E6;
+
 }
 
 .svg_item {
@@ -421,6 +413,8 @@ gap: 24px;
 
 .updates_media {
   margin-left: 8px;
+  padding: 24 px;
+  
 }
 
 .list_nickname {
@@ -434,16 +428,15 @@ line-height: 16px; /* 125% */
 
 .list_description {
   color: #6C757D;
-font-family: Roboto;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 100%; /* 16px */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: var(--weight-text);
+  line-height: 100%; /* 16px */
+  margin-bottom: var(--space-m);
+  margin-top: var(--space-m);
 }
 
-.updates_media {
-  
-}
 
 .feetback {
   font-family: Roboto;
@@ -457,11 +450,26 @@ line-height: 100%; /* 16px */
   align-self: stretch;
 }
 
+.position_badge {
+  position: absolute;
+  left: 1000px;
+}
+
 .feetback_badge {
 position: absolute;
   display: inline-flex;
 transform: rotate(30deg);
 padding: 12px 24px;
+
+background-color: #FF7347;
+color: var(--color-white);
+font-family: Roboto;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: 120%;
+
+border-radius: 70px;
 flex-direction: column;
 align-items: center;
 gap: 12px;
@@ -483,15 +491,15 @@ gap: 12px;
 
 .expirience_list {
   display: flex;
-padding: 16px;
-flex-direction: column;
-align-items: flex-start;
-gap: 8px;
-flex: 1 0 0;
-align-self: stretch;
+  padding: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  flex: 1 0 0;
+  align-self: stretch;
 
-border-radius: 12px;
-background: #212529;
+  border-radius: 12px;
+  background: #212529;
 }
 
 .expirience_name {
@@ -505,8 +513,8 @@ background: #212529;
 .expirience_details {
   color: #B1B1B1;
   font-family: Inter;
-  font-size: 16px;
+  font-size: var(--size-d);
   font-style: normal;
-  font-weight: 400;
+  font-weight: var(--weight-text);
   line-height: 22px; /* 137.5% */
 }

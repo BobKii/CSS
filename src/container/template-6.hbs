@@ -1,6 +1,6 @@
 <header class="header">
   <div>
-    {{> logo }}
+    {{> logo-4 }}
   </div>
 
   <nav class="header_nav ">
@@ -17,11 +17,7 @@
 
     <div class="msg">
       <strong class="msg_name"> {{description}} </strong>
-      {{!-- <p class="msg_text"> {{message}} </p>
-      <span class="msg_day"> {{day}} </span> --}}
     </div>
-
-    {{!-- <a href="#" class="messages_link">All messages</a> --}}
   </div>
   {{/with}}
 
@@ -32,7 +28,6 @@
     <div class="form_input_list">
       {{#each inputs}}
       <input type="{{type}}" placeholder="{{placeholder}}" name="{{name}}" id="form-input-{{id}}" class="form_input" />
-
       {{/each}}
     </div>
 
@@ -59,7 +54,7 @@
           <path d="M32 0H0V32H32V0Z" fill="#E83E8C" />
         </svg>
       </div>
-      {{!-- <img src="#" alt=" image" class="list_item_img"> --}}
+
       <div class="updates_media">
         <div class="list_nickname"> {{nickname}}</div>
         <div class="list_description"> {{description}} </div>
@@ -70,16 +65,14 @@
   {{/with}}
   <a href="#" class="messages_link">All updates</a>
 </divupdates>
-{{!-- <div class="feetback_badge">
 
-</div> --}}
 
 <divfeetback class="feetback">
-  <button type="button" class="feetback_badge">{{badge}}</button>
+  <div class="position_badge">
+    <a type="button" class="feetback_badge btn">{{expirience.badge}}</a>
+  </div>
   {{#with expirience}}
   <div class="feetback_header"> {{title}} </div>
-  {{!-- <div class="feetback_badge"> {{badge}} </div> --}}
-
   <div class="expirience">
     {{#each list}}
     <div class="expirience_list">
@@ -98,7 +91,6 @@
   <div>
     <strong> {{title}} </strong>
     <p> {{text}} </p>
-
   </div>
   {{/each}}
 </div>
@@ -106,7 +98,7 @@
 <footer class="footer">
 
   <div class="col-3">
-    {{> logo }}
+    {{> logo-4 }}
     <span class="footer_copyright">Copyright 2023-2024</span>
   </div>
   {{#each footer}}
