@@ -1,5 +1,67 @@
 @layer component, variant, main, adaptive;
 
+@layer component {
+  .page_section {
+    display: flex;
+    justify-content: center;
+  }
+
+  .button {
+    text-decoration: none;
+    color: var(--color-black);
+    padding: var(--spacing-3);
+    border-radius: var(--radius-1);
+    text-align: center;
+    border: 1px solid transparent;
+  }
+
+  .icon {
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .double_line {
+    line-height: var(--line-height);
+  }
+
+
+}
+
+@layer component {
+
+}
+
+@layer variant {
+  .button_primary {
+    color: var(--color-white);
+    background-color: var(--color-primary);
+  }
+
+  .button_secondary {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+    border-width: 2px;    
+  }
+
+  .page_section_light {
+    background-color: var(--color-light);
+  }
+
+  .feat_icon {
+    height: 48px;
+    width: 48px;       
+
+  }
+
+  .icon_arrow {
+    height: 14px;
+    width: 24px;
+    background-image: url('/svg/feature/arrow-right.svg');
+  }  
+
+}
+
 @font-face {
   font-family: 'HelveticaNeueBold';
   src: url('/font/HelveticaNeueBold.ttf');
@@ -47,15 +109,36 @@ body {
 
 }
 
-.page {
-  display: grid;
+@layer adaptive {
+
+  @media all and (1260px <= width ) {
+    .page_content {
+      width: 100%;
+      max-width: var(--page-width-big);
+    
+    }
+  }
+  
+  @media all and (1000px <= width < 1260px ) {
+    .page_content {
+      left: 511px;    
+      height: 300px;  
+    }
+  }
+  
+  @media all and ( width < 1000px ) {
+    .page_content {
+      width: 100%;
+      max-width: var(--page-width-small);
+    
+    }
+  }  
+  
 }
 
-@layer component {
-  .page_section {
-    display: flex;
-    justify-content: center;
-  }
+
+.page {
+  display: grid;
 }
 
 .page_content {
@@ -63,29 +146,6 @@ body {
 
   padding: var(--spacing-3);
  
-}
-
-@media all and (1260px <= width ) {
-  .page_content {
-    width: 100%;
-    max-width: var(--page-width-big);
-  
-  }
-}
-
-@media all and (1000px <= width < 1260px ) {
-  .page_content {
-    left: 511px;    
-    height: 300px;  
-  }
-}
-
-@media all and ( width < 1000px ) {
-  .page_content {
-    width: 100%;
-    max-width: var(--page-width-small);
-  
-  }
 }
 
 .hero_section {
@@ -150,18 +210,6 @@ body {
   gap: var(--spacing-5);
 }
 
-@layer component {
-  .button {
-    text-decoration: none;
-    color: var(--color-black);
-    padding: var(--spacing-3);
-    border-radius: var(--radius-1);
-    text-align: center;
-    border: 1px solid transparent;
-
-  }
-}
-
 .click {
   transition: opacity var(--transition-1);
 
@@ -176,21 +224,6 @@ body {
   opacity: var(--opacity-2);
 }
 
-@layer variant {
-  .button_primary {
-    color: var(--color-white);
-    background-color: var(--color-primary);
-  }
-
-  .button_secondary {
-    color: var(--color-primary);
-    border-color: var(--color-primary);
-    border-width: 2px;
-    
-  }
-
-}
-
 .features_section {
   padding-top: 150px;
   padding-bottom: 150px;
@@ -198,12 +231,6 @@ body {
   display: grid;
   gap: var(--spacing-5);
 
-}
-
-@layer variant {
-  .page_section_light {
-    background-color: var(--color-light);
-  }
 }
 
 .features_title {
@@ -230,29 +257,6 @@ body {
 
 }
 
-@layer component {
-  .icon {
-    display: block;
-    background-repeat: no-repeat;
-    background-position: center center;
-  }
-}
-
-@layer variant {
-  .feat_icon {
-    height: 48px;
-    width: 48px;       
-
-  }
-
-  .icon_arrow {
-    height: 14px;
-    width: 24px;
-    background-image: url('/svg/feature/arrow-right.svg');
-  }  
-
-}
-
 .feat_link {
   justify-self: flex-end;
 
@@ -271,9 +275,3 @@ body {
   grid-row: 1/3;
 }
 
-@layer component {
-  .double_line {
-    line-height: var(--line-height);
-  }
-
-}
