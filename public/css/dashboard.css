@@ -181,6 +181,36 @@
     position: relative;
   }
 
+  .analytic_small {
+    /* border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;    
+    gap: var(--spacing-2);
+    padding: var(--spacing-5);
+
+    justify-content: space-between;   
+    align-items: flex-start; */
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 2 1fr;
+    gap: 20px;
+
+
+  }
+
+  .total_small {
+    border-radius: 8px;
+    display: flex;
+    /* grid-template-columns: 2 1fr; */
+    flex-direction: row;
+    flex-wrap: wrap;    
+    gap: var(--spacing-2);
+
+  }
+
+
+
  
 }
 
@@ -266,6 +296,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 1fr;
+    gap: var(--spacing-5);
   }
 
   .analytic__button {
@@ -283,6 +314,12 @@
     position: absolute;
     top: 0;
     left: calc(100% + var(--spacing-1) );
+  }
+
+  .total__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-1);
   }
 
  
@@ -329,6 +366,10 @@
      font-weight: 500;
    }
 
+   .text--boltik {
+    font-weight: 600;
+  }
+
    .vertical--small {
     gap: var(--spacing-2);
    }
@@ -358,6 +399,13 @@
 
    }
 
+   .icon--color-purple {
+    background-color: var(--color-purple-dark);
+
+   }
+
+   /* --------- 2- cart ----------- */
+
    .icon--color-blue {
     background-color: var(--color-blue-dark);
    }
@@ -373,8 +421,40 @@
 
    }
 
+   .analytic--purple{
+    background-color: var(--color-purple-light);
+   }
+
+
+
    .analytic--blue {
     background-color: var(--color-blue-light);
+   }
+
+   .total_double {
+    display: flex;
+    grid-column: 1 / 2;
+    padding: var(--spacing-5);
+   }
+
+   .analytic--white {
+    background-color: var(--color-white);
+    border: 1px solid #E0E4E8;;
+
+   }
+
+   .icon--color-white {
+    background-color: #FFF8E3;
+   }
+
+   .text--total-white {
+    color: var(--color-white);
+    font-size: var(--size-3);
+   }
+
+   .text--total-black {
+    color: var(--color-black);
+    font-size: var(--size-3);
    }
  
 
