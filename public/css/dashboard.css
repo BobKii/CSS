@@ -259,7 +259,7 @@
     width: 100%;
     max-width: 30%;
     min-width: 180px;
-    background-color: #F8FAFC;
+    background-color: #F8FAFC;    
     /* display: grid; */
     /* position: relative; */
    
@@ -280,6 +280,31 @@
     top: calc(50% - (20px / 2));
     right: var(--spacing-2);
     
+  }
+
+  .header__utility {
+    /* width: 100%; */
+    max-width: 30%;
+    min-width: 134px;
+    background-color: #F8FAFC;
+
+    display: flex;
+    align-items: right;
+    gap: var(--spacing-4);
+    padding-right: var(--spacing-5);
+    justify-content: flex-end;
+    /* display: grid;
+    grid-template-rows: auto;
+    position: relative; */
+   
+  }
+
+  .header__icon-utility {
+    height: 24px;
+    width: 24px;
+    /* position: absolute; */
+    top: calc(50% - (20px / 2));
+    right: var(--spacing-2);
   }
  
   .field__select {
@@ -443,7 +468,7 @@
 
    }
 
-   .icon--color-white {
+   .icon--color-yellow {
     background-color: #FFF8E3;
    }
 
@@ -456,6 +481,8 @@
     color: var(--color-black);
     font-size: var(--size-3);
    }
+
+ 
  
 
 }
